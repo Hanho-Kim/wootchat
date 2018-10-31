@@ -229,7 +229,7 @@ input,textarea{
 
 #chat-room{
   position:relative;
-  display:block;
+  display:inline-block;
   padding:0px;
   width:100vw;
   height:100vh;
