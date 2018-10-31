@@ -114,10 +114,10 @@ function init() {
 
         if( 100 > $("#chat-room-scroll").scrollTop() ){
 
-          loadMessagesOnceInfiniteScroll(infiniteScrollKey,3);
+          loadMessagesOnceInfiniteScroll(infiniteScrollKey,12);
           $(this).unbind("scroll.chat");
 
-          return infiniteScroll();
+          //return infiniteScroll();
 
         }
 
@@ -514,9 +514,7 @@ function displayMessage(key, username, uid, text, avatarUrl, avatarColor, time, 
     image.src = imageUrl + '&' + new Date().getTime();
     $(messageElement).remove();
     imageElement.innerHTML = '';
-    if(appendBool){
-      $(imageElement).append(image);
-    }
+    $(imageElement).append(image);
   }
 
   if(uid == chatConfig.user.uid){
