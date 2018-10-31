@@ -6,6 +6,7 @@ html {
   width: 100%;
   margin:0px;
   padding:0px;
+  overflow:hidden;
 }
 body{
   width:100%;
@@ -14,6 +15,7 @@ body{
   color:rgb(38,38,38);
   margin:0px;
   padding:0px;
+  overflow:hidden;
 }
 input,textarea{
   font-family: 'san-serif';
