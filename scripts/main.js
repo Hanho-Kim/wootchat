@@ -110,9 +110,9 @@ function init() {
   
   var infiniteScroll = function(){
 
-    $("#chat-room").unbind("scroll.chat").bind("scroll.chat",function() {
+    $("#chat-room-scroll").unbind("scroll.chat").bind("scroll.chat",function() {
 
-        if( 100 > $("#chat-room").scrollTop() ){
+        if( 100 > $("#chat-room-scroll").scrollTop() ){
 
           loadMessagesOnceInfiniteScroll(infiniteScrollKey,3);
           $(this).unbind("scroll.chat");
@@ -304,7 +304,7 @@ function loadMessagesOnceInfiniteScroll( keyFrom, count ) {
     $(messageListElement).prepend(divWrapper);
 
     setTimeout(function() {$(divWrapper).find("chat-item").add('visible')}, 1);
-    messageListElement.scrollTop = $(divWrapper).prop('scrollHeight') - 150;
+    $("#chat-room-scroll").scrollTop($(divWrapper).prop('scrollHeight') - 150);
 
   };
 
@@ -506,7 +506,7 @@ function displayMessage(key, username, uid, text, avatarUrl, avatarColor, time, 
     var image = document.createElement('img');
     image.addEventListener('load', function() {
       if(appendBool){
-        messageListElement.scrollTop = messageListElement.scrollHeight;
+        $("#chat-room-scroll").scrollTop(messageListElement.scrollHeight);
       }
     });
     image.src = imageUrl + '&' + new Date().getTime();
@@ -524,7 +524,7 @@ function displayMessage(key, username, uid, text, avatarUrl, avatarColor, time, 
   // Show the card fading-in and scroll to view the new message.
   setTimeout(function() {div.classList.add('visible')}, 1);
   if(appendBool){
-    messageListElement.scrollTop = messageListElement.scrollHeight;
+    $("#chat-room-scroll").scrollTop(messageListElement.scrollHeight);
     messageInputElement.focus();
   }
   

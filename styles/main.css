@@ -239,14 +239,19 @@ input,textarea{
 /* End of Footer */
 
 /* Chat */
-
-#chat-room{
+#chat-room-scroll{
   position:relative;
-  display:inline-block;
-  padding:0px;
+  display:block;
   width:100vw;
   height:100vh;
   overflow-y:auto;
+}
+
+#chat-room{
+  position:relative;
+  display:block;
+  padding-top:300px;
+  padding-bottom:140px;
 }
 .chat-header-detail{
   padding-top:10px;
