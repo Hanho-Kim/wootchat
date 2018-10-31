@@ -22,6 +22,15 @@ input,textarea{
   outline:none;
 }
 
+.row:before, .row:after{
+  content: " ";
+  display: table;
+}
+.row:after{
+  clear: both;
+}
+
+
 #popup-message{
   position:fixed;
   top:50%;
