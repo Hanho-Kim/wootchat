@@ -4,12 +4,14 @@ a{
 
 html {
   width: 100%;
+  height:100%;
   margin:0px;
   padding:0px;
   overflow:hidden;
 }
 body{
   width:100%;
+  height:100%;
   font-size:14px;
   font-family:  'Nanum Square';
   color:rgb(38,38,38);
@@ -244,8 +246,6 @@ input,textarea{
   padding:0px;
   width:100vw;
   height:100vh;
-  padding-top:300px;
-  padding-bottom:140px;
   overflow-y:auto;
 }
 .chat-header-detail{
