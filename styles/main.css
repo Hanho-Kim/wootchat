@@ -423,7 +423,6 @@ input,textarea{
 .chat-room-overlap-section{
   position:relative;
   display:block;
-  width:100%;
 }
 .chat-room-overlap-section-sticker{
   height:180px;

@@ -117,6 +117,8 @@ function init() {
           loadMessagesOnceInfiniteScroll(infiniteScrollKey,3);
           $(this).unbind("scroll.chat");
 
+          return infiniteScroll();
+
         }
 
       });
