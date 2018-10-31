@@ -50,31 +50,37 @@ input,textarea{
   width:100%;
   background-color:rgb(253,253,253);
   border-bottom:1px solid rgb(230,230,230);
-  padding:0px 5px;
+  padding:0px;
   z-index:999;
 }
 #header .header-left{
+  position:relative;
+  display:inline-block;
   padding-top:13px;
   padding-bottom:12px;
   text-align:center;
   font-weight:600;
+  width:15%;
+  float:left;
 }
 #header .header-right{
+  position:relative;
+  display:inline-block;
+  width:15%;
   padding-top:15px;
   padding-bottom:11px;
   text-align:center;
   font-weight:600;
   font-size:14px;
   letter-spacing:0.5px;
+  float:right;
 }
 
 #header .header-left i{
   font-size:22px;
-  float:left;
 }
 #header .header-right i{
   font-size:20px;
-  float:right;
 }
 
 #header .header-right-index{
@@ -93,6 +99,9 @@ input,textarea{
 }
 
 #header .header-center{
+  position:relative;
+  display:inline-block;
+  width:70%;
   padding-top:14px;
   text-align:center;
   font-weight:600;
@@ -222,6 +231,7 @@ input,textarea{
   position:relative;
   display:block;
   padding:0px;
+  width:100vw;
   height:100vh;
   padding-top:300px;
   padding-bottom:140px;

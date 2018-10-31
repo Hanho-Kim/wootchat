@@ -13,10 +13,6 @@
     <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
     <!-- end of jquery -->
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
-    <!-- end of bootstrap -->
-
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
@@ -38,18 +34,18 @@
   </head>
 <body>
 
-<div id="header" class="row with-subheader">
-  <div class="header-left history-back button col-lg-4 col-md-4 col-sm-4 col-xs-4">
+<div id="header" class="with-subheader">
+  <div class="header-left history-back button">
     <i class="ion-android-close"></i>
   </div>
-  <div class="header-center block col-lg-16 col-md-16 col-sm-16 col-xs-16">
+  <div class="header-center">
     <span class="chat-title"></span>
   </div>
-  <div class="header-right overlap-button button col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="header-right overlap-button button">
     <i class="ion-android-menu" style="font-size:20px;"></i>
   </div>
 </div>
-<div id="subheader" class="row">
+<div id="subheader">
   <div class="chat-header-detail">
     <div class="date">
       <i class="ion-calendar"></i>
@@ -106,10 +102,10 @@
 </div>
 <div id="chat-room-overlap-background"></div>
 
-<div class="chat-room row" id="chat-room"></div>
+<div class="chat-room" id="chat-room"></div>
 
-<div id="footer" class="row">
-  <div class="footer-item-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+<div id="footer">
+  <div class="footer-item-wrapper">
     <div class="footer-textarea-wrapper">
       <form id="image-form" action="#">
         <input id="mediaCapture" type="file" accept="image/*" capture="camera">
