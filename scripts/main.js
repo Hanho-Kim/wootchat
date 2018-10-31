@@ -519,13 +519,13 @@ function displayMessage(key, username, uid, text, avatarUrl, avatarColor, time, 
 
   if(uid == chatConfig.user.uid){
       $(div).addClass("chat-item-my");
+      messageInputElement.focus();
   }
 
   // Show the card fading-in and scroll to view the new message.
   setTimeout(function() {div.classList.add('visible')}, 1);
   if(appendBool){
     $("#chat-room-scroll").scrollTop(messageListElement.scrollHeight);
-    messageInputElement.focus();
   }
   
   return div;
