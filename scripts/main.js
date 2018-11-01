@@ -112,12 +112,14 @@ function init() {
 
     $("#chat-room-scroll").unbind("scroll.chat").bind("scroll.chat",function() {
 
-        if( 100 > $("#chat-room-scroll").scrollTop() ){
+        if( 200 > $("#chat-room-scroll").scrollTop() ){
 
           loadMessagesOnceInfiniteScroll(infiniteScrollKey,12);
           $(this).unbind("scroll.chat");
 
-          //return infiniteScroll();
+          setTimeout(function(){ 
+            return infiniteScroll();
+          }, 1000);
 
         }
 
@@ -306,7 +308,7 @@ function loadMessagesOnceInfiniteScroll( keyFrom, count ) {
     $(messageListElement).prepend(divWrapper);
 
     setTimeout(function() {$(divWrapper).find("chat-item").add('visible')}, 1);
-    $("#chat-room-scroll").scrollTop($(divWrapper).prop('scrollHeight') - 150);
+    setTimeout(function() {$("#chat-room-scroll").scrollTop($(divWrapper).height() - 150);}, 100);
 
   };
 
